@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="todo.css" />
+    <title>TO-DO Application</title>
+  </head>
+  <body>
+    <section class="container">
+      <h1>To-Do Application</h1>
+      <div class="new-task-container box">
+        <input type="text" id="new-task" placeholder=" " class="form-element" />
+        <label for="new-task" class="new-task__label">Add New Task</label>
+        <button id="addTask">Add Task</button>
+      </div>
+
+      <div class="todo-container">
+        <div class="todo-list box">
+          <h2>Incomplete Tasks</h2>
+          <hr />
+          <br />
+          <ul class="flex-items">
+            <li class="sep-content">
+              <input type="checkbox" /><label>Task to be completed.</label>
+            </li>
+            <li class="sep-content">
+              <input type="checkbox" /><label>Task You should complete</label>
+            </li>
+          </ul>
+        </div>
+
+        <div class="complete-list box">
+          <h2>Completed Tasks</h2>
+          <hr />
+          <br />
+          <ul class="uncompleted-task">
+            <!-- <li>Task Name <button class="delete">Delete</button></li> -->
+          </ul>
+        </div>
+      </div>
+    </section>
+    <script src="todo.js"></script>
+  </body>
+</html>
