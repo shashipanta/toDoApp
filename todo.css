@@ -1,0 +1,140 @@
+body {
+  display: grid;
+  place-content: center;
+  background-color: lightcoral;
+  text-align: center;
+  font-family: monospace;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+h2 {
+  /* color: rgb(103, 173, 103); */
+  letter-spacing: 0.2em;
+}
+
+button {
+  border: none;
+  outline: none;
+  padding: 0.5em;
+  background-color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: black;
+  color: white;
+}
+
+input {
+  border: none;
+  outline: none;
+  padding: 0.5em 0.1em;
+  position: relative;
+}
+
+input:hover {
+  /* border-color: rgb(152, 236, 152); */
+  border-color: white;
+}
+
+input:focus {
+  border-color: black;
+}
+
+li {
+  list-style-type: none;
+}
+
+li:hover,
+input[type="checkbox"] {
+  background-color: rgb(103, 173, 103);
+  cursor: pointer;
+}
+
+.container {
+  min-width: 600px;
+  background-color: lightcoral;
+  padding: 1.5em;
+  border-radius: 9px;
+  /* background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px); */
+  /* opacity: 0;
+  transition: 0.5s;
+  animation: animate 2s ease-in-out infinite; */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.8);
+  /* box-shadow: 20px 20px 50px #00d2c6, -30px -30px 60px #00ffff; */
+}
+/* add task button */
+#addTask {
+  padding: 0.6em 0.9em;
+}
+
+.new-task-container {
+  display: flex;
+  gap: 0.3em;
+  position: relative;
+}
+
+.form-element {
+  padding: 0.8em 0.8em 0.5em;
+  border-radius: 0.2em;
+  background: lightcoral;
+  border: solid 1px black;
+  width: 80%;
+}
+/* animated label */
+.new-task__label {
+  position: absolute;
+  padding: 0 0.2em;
+  top: 0.75em;
+  left: 0.9em;
+  color: black;
+  background-color: lightcoral;
+  cursor: pointer;
+  transition: top 200ms ease-in, left 200ms ease-in, font-size 200ms ease-in;
+}
+
+.form-element:focus ~ .new-task__label,
+.form-element:not(:placeholder-shown).form-element:not(:focus)
+  ~ .new-task__label {
+  top: -0.6em;
+  left: 0.5em;
+  font-size: 0.8rem;
+}
+
+.todo-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 2em;
+}
+
+/* if there is content in the input field */
+.uncompleted-task {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  text-align: left;
+}
+
+.flex-items {
+  display: flex;
+  /* width: 50%; */
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 0.5em;
+}
+
+.sep-content {
+  display: flex;
+  background-color: rgb(152, 236, 152);
+  padding: 0.5em;
+  gap: 0.5em;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 3px;
+  width: 250px;
+}
